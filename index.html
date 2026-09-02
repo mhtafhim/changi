@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#102a43" />
+    <meta
+      name="description"
+      content="A time-safe, airside-only exploration plan for a Singapore Changi Airport transfer from Terminal 2 to Terminal 3."
+    />
+    <title>Changi Airside Field Guide · 5 October 2026</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#map">Skip to the interactive map</a>
+
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="Changi airside field guide home">
+        <svg aria-hidden="true" viewBox="0 0 40 40">
+          <path d="M5 28.5c8-1.8 14.4-7.7 18.8-17.2 1-2.2 4.1-2.2 5.2-.1 1.4 2.8.8 6.2-1.5 8.3L20 26.3l10.5 5.2-2.1 2.2-14-2.8-6.2 5.4-2-1.2 3.4-7.7L5 30.5v-2Z" />
+        </svg>
+        <span>Airside field guide</span>
+      </a>
+      <nav aria-label="Page sections">
+        <a href="#map">Map</a>
+        <a href="#route">Route</a>
+        <a href="#rules">Rules</a>
+      </nav>
+      <div class="airside-badge"><span aria-hidden="true">●</span> No immigration</div>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="date-line">Monday, 5 October 2026 · Singapore time</p>
+          <h1 id="hero-title">See Changi.<br />Stay airside.</h1>
+          <p class="hero-intro">
+            A clockwise T2 → T1 → T3 expedition built around your SQ 447 to SQ 326 connection.
+            It covers every major airside attraction in the current official terminal guides, then
+            puts you at T3 early for gate security.
+          </p>
+          <div class="flight-strip" aria-label="Flight itinerary">
+            <div>
+              <span>Arrive</span>
+              <strong>06:00</strong>
+              <small>SQ 447 · Terminal 2</small>
+            </div>
+            <div class="flight-line" aria-hidden="true">
+              <i></i><svg viewBox="0 0 24 24"><path d="m3 14 7.5 1 5.7 5.2 1.6-.6-2.7-5.5 4.9-1.5c1.2-.4 1.8-1.7 1.4-2.9-.4-1.2-1.7-1.8-2.9-1.4l-4.9 1.6-.9-6.1-1.7.5-.8 7.7-6.8 2.2-.4-.2Z" /></svg><i></i>
+            </div>
+            <div>
+              <span>Depart</span>
+              <strong>12:35</strong>
+              <small>SQ 326 · Terminal 3</small>
+            </div>
+          </div>
+        </div>
+
+        <aside class="time-card" aria-label="Connection timing">
+          <div class="stamp">Transit plan</div>
+          <p class="big-time">6<small>h</small> 35<small>m</small></p>
+          <p class="time-caption">scheduled connection</p>
+          <dl>
+            <div><dt>Explore</dt><dd>06:25–10:40</dd></div>
+            <div><dt>Reset + eat</dt><dd>10:40–11:10</dd></div>
+            <div><dt>Head to gate</dt><dd>11:10</dd></div>
+            <div class="deadline"><dt>At gate by</dt><dd>11:35</dd></div>
+          </dl>
+          <p class="checked-date">Facts checked 3 Sep 2026</p>
+        </aside>
+      </section>
+
+      <section class="safety-band" aria-label="Important transit instruction">
+        <div class="section-shell safety-inner">
+          <div class="safety-icon" aria-hidden="true">!</div>
+          <div>
+            <strong>At T2, follow “Transfer / Transit,” never “Arrivals / Immigration.”</strong>
+            <p>Jewel, Rain Vortex, The Wonderfall, Kinetic Rain, Daisy and the city tour are landside for this plan.</p>
+          </div>
+          <a href="#excluded">See excluded places</a>
+        </div>
+      </section>
+
+      <section class="prep section-shell" id="rules" aria-labelledby="prep-title">
+        <div class="section-heading">
+          <div>
+            <p>Before leaving Dhaka</p>
+            <h2 id="prep-title">Make the airside plan possible</h2>
+          </div>
+          <button class="text-button" id="reset-checklist" type="button">Reset checklist</button>
+        </div>
+        <div class="prep-grid">
+          <label class="prep-item">
+            <input type="checkbox" data-prep="bag" />
+            <span class="checkmark" aria-hidden="true"></span>
+            <span><strong>Bag tagged to FRA</strong><small>Ask the DAC agent to show “FRA” on the baggage receipt.</small></span>
+          </label>
+          <label class="prep-item">
+            <input type="checkbox" data-prep="pass" />
+            <span class="checkmark" aria-hidden="true"></span>
+            <span><strong>SQ 326 boarding pass issued</strong><small>If not, use the T2 transfer desk—do not enter immigration.</small></span>
+          </label>
+          <label class="prep-item">
+            <input type="checkbox" data-prep="gate" />
+            <span class="checkmark" aria-hidden="true"></span>
+            <span><strong>Gate checked after landing</strong><small>Your screenshot says T3; the exact A/B gate can still change.</small></span>
+          </label>
+          <label class="prep-item">
+            <input type="checkbox" data-prep="alarm" />
+            <span class="checkmark" aria-hidden="true"></span>
+            <span><strong>11:10 alarm set</strong><small>This is the non-negotiable stop-exploring alarm.</small></span>
+          </label>
+        </div>
+      </section>
+
+      <section class="map-section" id="map" aria-labelledby="map-title">
+        <div class="section-shell">
+          <div class="section-heading map-heading">
+            <div>
+              <p>Tap any numbered stop</p>
+              <h2 id="map-title">The airside loop</h2>
+            </div>
+            <div class="map-key" aria-label="Map legend">
+              <span><i class="key-dot route-key"></i>Planned route</span>
+              <span><i class="key-dot optional-key"></i>Optional detail</span>
+              <span><i class="key-line"></i>Skytrain</span>
+            </div>
+          </div>
+
+          <div class="map-toolbar">
+            <div class="filter-group" role="group" aria-label="Filter stops by terminal">
+              <button class="filter active" type="button" data-filter="all" aria-pressed="true">Whole loop</button>
+              <button class="filter" type="button" data-filter="T2" aria-pressed="false">T2</button>
+              <button class="filter" type="button" data-filter="T1" aria-pressed="false">T1</button>
+              <button class="filter" type="button" data-filter="T3" aria-pressed="false">T3</button>
+            </div>
+            <button class="locate-next" id="next-stop" type="button">Show my next stop</button>
+          </div>
+
+          <div class="map-layout">
+            <div class="map-frame" tabindex="0" aria-label="Scrollable schematic map of Changi Terminals 1, 2 and 3">
+              <svg id="terminal-map" viewBox="0 0 1240 690" role="img" aria-labelledby="map-svg-title map-svg-desc">
+                <title id="map-svg-title">Changi Airport airside exploration map</title>
+                <desc id="map-svg-desc">A not-to-scale schematic showing a route from Terminal 2 through Terminal 1 to Terminal 3, entirely inside the transit area.</desc>
+                <defs>
+                  <pattern id="hatch" width="12" height="12" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+                    <line x1="0" y1="0" x2="0" y2="12" stroke="#d64933" stroke-width="3" opacity=".16" />
+                  </pattern>
+                  <filter id="paper-shadow" x="-20%" y="-20%" width="140%" height="140%">
+                    <feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#102a43" flood-opacity=".09" />
+                  </filter>
+                </defs>
+
+                <path class="skytrain-route" d="M365 392 C410 352 432 286 467 258 M773 258 C826 286 841 354 875 392" />
+                <g class="train-label" transform="translate(392 314)">
+                  <rect width="94" height="30" rx="15" />
+                  <text x="47" y="20" text-anchor="middle">Skytrain</text>
+                </g>
+                <g class="train-label" transform="translate(760 314)">
+                  <rect width="94" height="30" rx="15" />
+                  <text x="47" y="20" text-anchor="middle">Skytrain</text>
+                </g>
+
+                <g class="terminal-shape terminal-t2">
+                  <path d="M42 363h296c25 0 45 20 45 45v190c0 25-20 45-45 45H42c-25 0-45-20-45-45V408c0-25 20-45 45-45Z" />
+                  <path class="terminal-detail" d="M25 449h332M25 540h332M125 380v245M262 380v245" />
+                  <text class="terminal-code" x="28" y="414">T2</text>
+                  <text class="terminal-name" x="90" y="412">arrival · gardens</text>
+                  <text class="gate-label" x="38" y="626">E GATES</text>
+                  <text class="gate-label" x="288" y="626">F GATES</text>
+                </g>
+
+                <g class="terminal-shape terminal-t1">
+                  <path d="M485 47h270c28 0 51 23 51 51v150c0 28-23 51-51 51H485c-28 0-51-23-51-51V98c0-28 23-51 51-51Z" />
+                  <path class="terminal-detail" d="M457 132h326M457 218h326M567 65v216M685 65v216" />
+                  <text class="terminal-code" x="465" y="99">T1</text>
+                  <text class="terminal-name" x="527" y="97">rooftop loop</text>
+                  <text class="gate-label" x="470" y="282">C GATES</text>
+                  <text class="gate-label" x="715" y="282">D GATES</text>
+                </g>
+
+                <g class="terminal-shape terminal-t3">
+                  <path d="M902 363h296c25 0 45 20 45 45v190c0 25-20 45-45 45H902c-25 0-45-20-45-45V408c0-25 20-45 45-45Z" />
+                  <path class="terminal-detail" d="M886 449h332M886 540h332M985 380v245M1122 380v245" />
+                  <text class="terminal-code" x="892" y="414">T3</text>
+                  <text class="terminal-name" x="954" y="412">butterflies · gate</text>
+                  <text class="gate-label" x="898" y="626">A GATES</text>
+                  <text class="gate-label" x="1148" y="626">B GATES</text>
+                </g>
+
+                <path class="route-ink" d="M76 493 C98 544 190 579 304 504 C351 475 340 416 367 391 C422 337 432 280 489 245 C546 210 700 240 751 244 C822 250 840 340 887 400 C931 456 1007 476 1072 501 C1132 524 1166 570 1197 600" />
+
+                <g id="map-pins"></g>
+
+                <g class="arrival-marker" transform="translate(46 466)">
+                  <circle r="13" />
+                  <path d="M-6 1h12M0-5v12" />
+                  <text x="20" y="5">ARRIVE 06:00</text>
+                </g>
+                <g class="gate-marker" transform="translate(1197 600)">
+                  <circle r="14" />
+                  <path d="m-5 0 4 4 7-9" />
+                  <text x="-20" y="32" text-anchor="end">GATE BY 11:35</text>
+                </g>
+
+                <g class="landside-zone">
+                  <rect x="425" y="405" width="390" height="180" rx="20" fill="url(#hatch)" />
+                  <path d="M443 432h354v128H443z" />
+                  <text x="620" y="473" text-anchor="middle">JEWEL / RAIN VORTEX</text>
+                  <text x="620" y="503" text-anchor="middle">LANDSIDE — DO NOT ENTER</text>
+                  <text class="small" x="620" y="531" text-anchor="middle">requires arrival immigration</text>
+                </g>
+                <text class="not-scale" x="1210" y="676" text-anchor="end">SCHEMATIC · NOT TO SCALE</text>
+              </svg>
+            </div>
+
+            <aside class="stop-panel" id="stop-panel" aria-live="polite">
+              <div class="panel-topline">
+                <span class="stop-terminal" id="panel-terminal">T2 · Level 2</span>
+                <span class="stop-hours" id="panel-hours">Open 24 hours</span>
+              </div>
+              <p class="panel-number" id="panel-number">Stop 1</p>
+              <h3 id="panel-title">Dreamscape</h3>
+              <p id="panel-description">An indoor garden of 20,000 plants, a fish pond and a digital sky. Wait for the 15-minute light-and-sound cycle.</p>
+              <dl class="panel-facts">
+                <div><dt>Plan</dt><dd id="panel-time">06:25–06:42 · 17 min</dd></div>
+                <div><dt>Find it</dt><dd id="panel-location">Near F gates</dd></div>
+                <div><dt>Do this</dt><dd id="panel-action">Walk the glass path and catch one sky change.</dd></div>
+              </dl>
+              <div class="panel-actions">
+                <label class="visited-control">
+                  <input type="checkbox" id="panel-visited" />
+                  <span>Mark visited</span>
+                </label>
+                <a id="panel-source" href="https://www.changiairport.com/en/experience/attractions-directory/dreamscape.html" target="_blank" rel="noreferrer">Official details</a>
+              </div>
+              <p class="micro-note" id="panel-note"></p>
+            </aside>
+          </div>
+        </div>
+      </section>
+
+      <section class="clock-section section-shell" aria-labelledby="clock-title">
+        <div class="clock-copy">
+          <p>Run the day before you fly</p>
+          <h2 id="clock-title">Slide the clock to see what’s next</h2>
+          <p>On 5 October this can switch to live Singapore time. Before then, it works as a rehearsal.</p>
+        </div>
+        <div class="clock-console">
+          <div class="clock-readout">
+            <output id="simulated-time" for="time-slider">06:25</output>
+            <span id="clock-status">Begin at Dreamscape</span>
+          </div>
+          <input id="time-slider" type="range" min="360" max="755" value="385" step="5" aria-label="Simulated Singapore time" />
+          <div class="clock-actions">
+            <span>06:00 arrival</span>
+            <button id="use-live-time" type="button">Use live time</button>
+            <span>12:35 departure</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="route-section section-shell" id="route" aria-labelledby="route-title">
+        <div class="section-heading route-heading">
+          <div>
+            <p>Your step-by-step order</p>
+            <h2 id="route-title">Walk it in this sequence</h2>
+          </div>
+          <div class="progress-wrap">
+            <span id="progress-text">0 of 21 visited</span>
+            <div class="progress-track" aria-hidden="true"><i id="progress-bar"></i></div>
+          </div>
+        </div>
+
+        <div class="route-notice">
+          <strong>Delay rule:</strong> if you are still in T2 after 08:15, skip the T1 loop and take the airside Skytrain straight to T3. If it is 11:10 anywhere, stop immediately and go to your gate.
+        </div>
+
+        <ol class="timeline" id="timeline"></ol>
+      </section>
+
+      <section class="amenities section-shell" aria-labelledby="amenities-title">
+        <div class="section-heading">
+          <div>
+            <p>Useful, not mandatory</p>
+            <h2 id="amenities-title">Build in one reset</h2>
+          </div>
+        </div>
+        <div class="amenity-grid">
+          <article>
+            <span aria-hidden="true">食</span>
+            <h3>Eat with a runway view</h3>
+            <p>Use Gourmet Garden in T2 for breakfast. Keep the final 10:40–11:10 slot for a quick T3 meal only if you are on schedule.</p>
+          </article>
+          <article>
+            <span aria-hidden="true">休</span>
+            <h3>Rest for free</h3>
+            <p>T3 has 24-hour snooze lounges on Level 2 in both the north and south transit halls. Set two alarms.</p>
+          </article>
+          <article>
+            <span aria-hidden="true">水</span>
+            <h3>Refill after security</h3>
+            <p>Finish drinks before gate screening. Carry an empty bottle and refill beyond the checkpoint when available.</p>
+          </article>
+          <article>
+            <span aria-hidden="true">静</span>
+            <h3>Quiet or prayer break</h3>
+            <p>Ask the nearest information counter for the closest airside prayer room or calm space; don’t cross an immigration boundary to reach one.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="excluded-section" id="excluded" aria-labelledby="excluded-title">
+        <div class="section-shell excluded-grid">
+          <div>
+            <p>Outside this route</p>
+            <h2 id="excluded-title">Beautiful—but landside</h2>
+            <p class="excluded-intro">These often appear in “Changi layover” lists, but each would break your no-immigration rule.</p>
+          </div>
+          <ul>
+            <li><span>Jewel</span><strong>Rain Vortex · Canopy Park · Forest Valley</strong></li>
+            <li><span>T2 public</span><strong>The Wonderfall · Flap Pix</strong></li>
+            <li><span>T1 public</span><strong>Kinetic Rain</strong></li>
+            <li><span>T3 public</span><strong>Daisy · Slide@T3</strong></li>
+            <li><span>Singapore entry</span><strong>Free Singapore Tour</strong></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="sources section-shell" aria-labelledby="sources-title">
+        <div class="section-heading">
+          <div>
+            <p>Verify again on travel day</p>
+            <h2 id="sources-title">Official sources</h2>
+          </div>
+        </div>
+        <div class="source-links">
+          <a href="https://www.changiairport.com/en/fly/transit-guide.html" target="_blank" rel="noreferrer"><span>01</span>Transit eligibility and security</a>
+          <a href="https://www.changiairport.com/en/at-changi/transport-and-directions/transferring-between-terminals-jewel.html" target="_blank" rel="noreferrer"><span>02</span>Skytrain and Jewel access</a>
+          <a href="https://www.changiairport.com/en/experience/attractions-directory.html" target="_blank" rel="noreferrer"><span>03</span>Attractions directory</a>
+          <a href="https://www.changiairport.com/en/fly/flight-information.html" target="_blank" rel="noreferrer"><span>04</span>Live flight and gate status</a>
+        </div>
+        <p class="source-note">Airport operations and locations can change before 5 October 2026. Follow live signs and airline staff over this guide.</p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="section-shell footer-inner">
+        <p>Built for SQ 447 → SQ 326 · 5 Oct 2026</p>
+        <p>Airside only · Changi local time (SGT, UTC+8)</p>
+      </div>
+    </footer>
+  </body>
+</html>
