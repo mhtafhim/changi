@@ -130,6 +130,370 @@ a {
   color: #2b9b69;
 }
 
+.journey-cover {
+  min-height: 700px;
+  padding: 90px 0 74px;
+  display: grid;
+  grid-template-columns: minmax(0, 0.82fr) minmax(520px, 1.18fr);
+  grid-template-rows: 1fr auto;
+  align-items: center;
+  column-gap: 86px;
+}
+
+.journey-cover-copy > p:last-child {
+  max-width: 58ch;
+  margin: 28px 0 0;
+  color: var(--runway-2);
+  font-size: 1.02rem;
+  line-height: 1.75;
+}
+
+.journey-cover h1 {
+  max-width: 720px;
+  margin-bottom: 0;
+  font-size: clamp(3.7rem, 7.2vw, 6.8rem);
+}
+
+.journey-spine {
+  display: grid;
+  grid-template-columns: auto 1fr auto 1fr auto;
+  align-items: center;
+}
+
+.journey-leg {
+  position: relative;
+  z-index: 1;
+  width: 138px;
+  min-height: 196px;
+  padding: 23px 19px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: white;
+  background: var(--runway);
+  border: 1px solid rgba(16, 42, 67, 0.18);
+}
+
+.journey-leg > span {
+  font-family: var(--serif);
+  font-size: 2.45rem;
+  letter-spacing: -0.06em;
+}
+
+.journey-leg strong,
+.journey-leg small {
+  display: block;
+}
+
+.journey-leg strong {
+  margin-bottom: 5px;
+  font-size: 0.95rem;
+}
+
+.journey-leg small {
+  color: #bdcad3;
+  font-size: 0.67rem;
+  line-height: 1.45;
+}
+
+.journey-leg.changi-leg {
+  min-height: 242px;
+  color: var(--runway);
+  background: var(--sun);
+  border-color: var(--sun);
+  box-shadow: 9px 9px 0 var(--runway);
+}
+
+.journey-leg.changi-leg small {
+  color: #4b4850;
+}
+
+.journey-leg.frankfurt-leg {
+  background: #2f6b55;
+  border-color: #2f6b55;
+}
+
+.spine-flight {
+  min-width: 74px;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  color: var(--ink-muted);
+}
+
+.spine-flight i {
+  height: 1px;
+  background: var(--runway);
+}
+
+.spine-flight b {
+  padding: 0 7px;
+  font-size: 0.61rem;
+  white-space: nowrap;
+}
+
+.journey-facts {
+  grid-column: 1 / -1;
+  margin-top: 62px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-top: 1px solid rgba(16, 42, 67, 0.22);
+  border-left: 1px solid rgba(16, 42, 67, 0.22);
+}
+
+.journey-facts > div {
+  min-height: 86px;
+  padding: 18px 20px;
+  border-right: 1px solid rgba(16, 42, 67, 0.22);
+  border-bottom: 1px solid rgba(16, 42, 67, 0.22);
+}
+
+.journey-facts strong,
+.journey-facts span {
+  display: block;
+}
+
+.journey-facts strong {
+  margin-bottom: 2px;
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.journey-facts span {
+  color: var(--ink-muted);
+  font-size: 0.7rem;
+}
+
+.airport-chapter {
+  padding: 110px 0;
+}
+
+.dhaka-section {
+  color: var(--runway);
+  background: #e6edf1;
+  border-top: 1px solid #c8d4da;
+  border-bottom: 1px solid #c8d4da;
+}
+
+.chapter-heading {
+  display: grid;
+  grid-template-columns: 175px minmax(0, 1fr);
+  gap: 42px;
+  align-items: end;
+  margin-bottom: 48px;
+}
+
+.chapter-code {
+  display: flex;
+  flex-direction: column;
+  color: var(--transit-dark);
+  font-family: var(--serif);
+  font-size: 1.25rem;
+}
+
+.chapter-code span {
+  margin-top: 5px;
+  font-family: var(--sans);
+  font-size: 4.6rem;
+  font-weight: 800;
+  line-height: 0.9;
+  letter-spacing: -0.08em;
+}
+
+.chapter-heading > div:last-child > p:first-child {
+  margin-bottom: 12px;
+  color: var(--transit-dark);
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+}
+
+.chapter-intro {
+  max-width: 66ch;
+  margin: 20px 0 0;
+  color: var(--ink-muted);
+}
+
+.document-ribbon {
+  margin-bottom: 30px;
+  padding: 18px 22px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  background: var(--runway);
+}
+
+.document-ribbon strong {
+  margin-right: 9px;
+  color: var(--sun);
+  font-size: 0.78rem;
+}
+
+.document-ribbon span {
+  padding: 5px 10px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 999px;
+  font-size: 0.68rem;
+}
+
+.chapter-layout {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  align-items: start;
+  gap: 54px;
+}
+
+.airport-brief {
+  position: sticky;
+  top: 24px;
+  padding: 28px;
+  color: white;
+  background: var(--runway);
+  box-shadow: 9px 9px 0 var(--sun);
+}
+
+.airport-brief-code {
+  margin-bottom: 30px;
+  font-family: var(--serif);
+  font-size: 4.4rem;
+  line-height: 0.9;
+  letter-spacing: -0.07em;
+}
+
+.airport-brief dl {
+  margin: 0;
+}
+
+.airport-brief dl > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 11px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.17);
+  font-size: 0.74rem;
+}
+
+.airport-brief dt {
+  color: #bdcad3;
+}
+
+.airport-brief dd {
+  margin: 0;
+  font-weight: 800;
+  text-align: right;
+}
+
+.airport-brief > p {
+  margin: 27px 0 0;
+  color: #bdcad3;
+  font-size: 0.7rem;
+  line-height: 1.55;
+}
+
+.journey-steps {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid rgba(16, 42, 67, 0.24);
+}
+
+.journey-steps li {
+  position: relative;
+  min-height: 125px;
+  padding: 24px 16px;
+  display: grid;
+  grid-template-columns: 34px 82px minmax(0, 1fr);
+  gap: 17px;
+  align-items: start;
+  border-bottom: 1px solid rgba(16, 42, 67, 0.2);
+}
+
+.journey-steps li.priority-step {
+  background: rgba(242, 177, 52, 0.18);
+  border-left: 4px solid var(--sun);
+}
+
+.journey-steps li.takeoff-step,
+.journey-steps li.landing-step,
+.journey-steps li.exit-step {
+  background: rgba(0, 109, 119, 0.08);
+}
+
+.journey-steps time {
+  padding-top: 2px;
+  font-family: var(--serif);
+  font-size: 1.18rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.journey-steps h3 {
+  margin: 0 0 6px;
+  font-size: 1rem;
+}
+
+.journey-steps p {
+  max-width: 69ch;
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: 0.79rem;
+  line-height: 1.6;
+}
+
+.journey-check {
+  position: relative;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+}
+
+.journey-check input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.journey-check span {
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border: 2px solid var(--runway);
+}
+
+.journey-check input:checked + span {
+  color: white;
+  background: var(--transit);
+  border-color: var(--transit);
+}
+
+.journey-check input:checked + span::after {
+  content: "✓";
+  font-size: 0.8rem;
+  font-weight: 800;
+}
+
+.journey-check:has(input:focus-visible) {
+  outline: 3px solid var(--sun);
+  outline-offset: 4px;
+}
+
+.journey-steps li:has(input:checked) h3,
+.journey-steps li:has(input:checked) p {
+  opacity: 0.52;
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
+.official-note {
+  margin: 26px 0 0 354px;
+  color: var(--ink-muted);
+  font-size: 0.72rem;
+  line-height: 1.55;
+}
+
 .hero {
   min-height: 650px;
   padding: 80px 0 68px;
@@ -373,6 +737,14 @@ h2 {
   font-size: clamp(2.35rem, 5vw, 4.4rem);
   line-height: 1;
   letter-spacing: -0.055em;
+}
+
+.changi-title {
+  max-width: 690px;
+  margin-bottom: 24px;
+  font-size: clamp(4rem, 9vw, 7.8rem);
+  line-height: 0.88;
+  letter-spacing: -0.072em;
 }
 
 h3 {
@@ -1122,6 +1494,120 @@ h3 {
   font-size: 0.9rem;
 }
 
+.frankfurt-section {
+  color: #17382d;
+  background: #e5eee7;
+  border-bottom: 1px solid #bdcec2;
+}
+
+.frankfurt-section .chapter-code,
+.frankfurt-section .chapter-heading > div:last-child > p:first-child {
+  color: #2f6b55;
+}
+
+.arrival-planner {
+  margin-bottom: 24px;
+  display: grid;
+  grid-template-columns: 1fr 0.75fr 0.7fr;
+  border-top: 1px solid rgba(23, 56, 45, 0.24);
+  border-left: 1px solid rgba(23, 56, 45, 0.24);
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.arrival-control,
+.exit-estimate {
+  min-height: 128px;
+  padding: 20px;
+  border-right: 1px solid rgba(23, 56, 45, 0.24);
+  border-bottom: 1px solid rgba(23, 56, 45, 0.24);
+}
+
+.arrival-control > span,
+.exit-estimate > span {
+  display: block;
+  margin-bottom: 14px;
+  color: #527063;
+  font-size: 0.68rem;
+  font-weight: 800;
+}
+
+.segmented {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.segmented button {
+  padding: 8px 11px;
+  color: #315749;
+  background: transparent;
+  border: 1px solid rgba(47, 107, 85, 0.4);
+  cursor: pointer;
+  font-size: 0.7rem;
+  font-weight: 800;
+}
+
+.segmented button.active {
+  color: white;
+  background: #2f6b55;
+  border-color: #2f6b55;
+}
+
+.exit-estimate output,
+.exit-estimate small {
+  display: block;
+}
+
+.exit-estimate output {
+  margin-bottom: 8px;
+  font-family: var(--serif);
+  font-size: 1.7rem;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+.exit-estimate small {
+  color: #527063;
+  font-size: 0.62rem;
+}
+
+.entry-mode-note {
+  margin-bottom: 32px;
+  padding: 17px 20px;
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 17px;
+  color: white;
+  background: #2f6b55;
+  font-size: 0.77rem;
+  line-height: 1.55;
+}
+
+.entry-mode-note strong {
+  color: #cce6d7;
+}
+
+.frankfurt-brief {
+  background: #17382d;
+  box-shadow: 9px 9px 0 #75a88e;
+}
+
+.frankfurt-section .journey-steps {
+  border-color: rgba(23, 56, 45, 0.25);
+}
+
+.frankfurt-section .journey-steps li {
+  border-color: rgba(23, 56, 45, 0.2);
+}
+
+.frankfurt-section .journey-check span {
+  border-color: #17382d;
+}
+
+.journey-steps li.is-hidden {
+  display: none;
+}
+
 .source-links {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -1177,6 +1663,19 @@ footer {
 }
 
 @media (max-width: 980px) {
+  .journey-cover {
+    grid-template-columns: 1fr;
+    gap: 55px;
+  }
+
+  .journey-spine {
+    width: min(100%, 720px);
+  }
+
+  .journey-facts {
+    margin-top: 0;
+  }
+
   .hero {
     gap: 45px;
   }
@@ -1202,6 +1701,24 @@ footer {
   .timeline-item {
     grid-template-columns: 88px 46px minmax(170px, 0.9fr) minmax(220px, 1.1fr) auto;
     gap: 13px;
+  }
+
+  .chapter-layout {
+    grid-template-columns: 250px minmax(0, 1fr);
+    gap: 38px;
+  }
+
+  .official-note {
+    margin-left: 288px;
+  }
+
+  .arrival-planner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .exit-estimate {
+    grid-column: 1 / -1;
+    min-height: 0;
   }
 }
 
@@ -1233,6 +1750,96 @@ footer {
     padding: 60px 0 64px;
     grid-template-columns: 1fr;
     gap: 50px;
+  }
+
+  .journey-cover {
+    min-height: 0;
+    padding: 62px 0 70px;
+  }
+
+  .journey-cover h1 {
+    font-size: clamp(3.6rem, 18vw, 6rem);
+  }
+
+  .journey-spine {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .journey-leg,
+  .journey-leg.changi-leg {
+    width: 100%;
+    min-height: 104px;
+    padding: 18px 20px;
+    flex-direction: row;
+    align-items: center;
+    box-shadow: none;
+  }
+
+  .journey-leg > span {
+    font-size: 2.1rem;
+  }
+
+  .journey-leg > div {
+    text-align: right;
+  }
+
+  .spine-flight {
+    min-height: 50px;
+    grid-template-columns: 1fr auto 1fr;
+    padding-inline: 40px;
+  }
+
+  .spine-flight i {
+    background: var(--transit);
+  }
+
+  .journey-facts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .airport-chapter {
+    padding: 76px 0;
+  }
+
+  .chapter-heading {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .chapter-code {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 12px;
+  }
+
+  .chapter-code span {
+    font-size: 3.4rem;
+  }
+
+  .chapter-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .airport-brief {
+    position: static;
+  }
+
+  .official-note {
+    margin-left: 0;
+  }
+
+  .arrival-planner {
+    grid-template-columns: 1fr;
+  }
+
+  .exit-estimate {
+    grid-column: auto;
+  }
+
+  .entry-mode-note {
+    grid-template-columns: 1fr;
+    gap: 5px;
   }
 
   h1 {
@@ -1374,6 +1981,35 @@ footer {
 @media (max-width: 480px) {
   .wordmark svg {
     width: 30px;
+  }
+
+  .journey-facts {
+    grid-template-columns: 1fr;
+  }
+
+  .document-ribbon {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .document-ribbon strong {
+    margin-bottom: 4px;
+  }
+
+  .journey-steps li {
+    grid-template-columns: 28px 60px minmax(0, 1fr);
+    gap: 10px;
+    padding-inline: 5px;
+  }
+
+  .journey-steps time {
+    font-size: 1rem;
+  }
+
+  .journey-check,
+  .journey-check span {
+    width: 23px;
+    height: 23px;
   }
 
   .time-card {

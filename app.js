@@ -469,6 +469,8 @@ const travelSegments = [
 
 const storageKey = "changi-airside-guide-v1";
 const prepStorageKey = "changi-airside-prep-v1";
+const journeyStorageKey = "dac-fra-journey-v1";
+const arrivalPreferenceKey = "fra-arrival-preferences-v1";
 let selectedStopId = "dreamscape";
 let activeFilter = "all";
 
@@ -498,6 +500,7 @@ function loadSet(key) {
 
 let visited = loadSet(storageKey);
 let prepChecked = loadSet(prepStorageKey);
+let journeyChecked = loadSet(journeyStorageKey);
 
 function saveSet(key, set) {
   try {
@@ -740,6 +743,111 @@ function initPrepChecklist() {
   });
 }
 
+function initJourneyChecklist() {
+  document.querySelectorAll("input[data-journey]").forEach((input) => {
+    input.checked = journeyChecked.has(input.dataset.journey);
+    input.addEventListener("change", () => {
+      if (input.checked) journeyChecked.add(input.dataset.journey);
+      else journeyChecked.delete(input.dataset.journey);
+      saveSet(journeyStorageKey, journeyChecked);
+    });
+  });
+}
+
+const arrivalCopy = {
+  short: {
+    label: "Short-stay arrival:",
+    note: "Use an EES kiosk if directed, then see a border officer. Expect passport scanning, a facial image and fingerprints; keep your visa and supporting documents ready.",
+    step: "Use the EES kiosk if staff direct you, then present your passport and short-stay visa to the officer. Be ready with your address, visit purpose, return plan and proof of funds."
+  },
+  resident: {
+    label: "Long-stay or resident arrival:",
+    note: "Long-stay visa and residence-permit holders are generally exempt from EES registration. Show your passport with the valid visa or permit; use EasyPASS only when signs or staff confirm you are eligible.",
+    step: "Present your passport with your valid long-stay visa or residence permit. Follow the officer’s lane instructions; eligible German residence-permit holders may be directed to EasyPASS."
+  }
+};
+
+const arrivalTimes = {
+  "short-checked": { customs: "21:15", exit: "21:25" },
+  "resident-checked": { customs: "21:00", exit: "21:10" },
+  "short-cabin": { customs: "20:45", exit: "20:55" },
+  "resident-cabin": { customs: "20:30", exit: "20:40" }
+};
+
+let entryMode = "short";
+let bagMode = "checked";
+
+function loadArrivalPreferences() {
+  try {
+    const stored = JSON.parse(localStorage.getItem(arrivalPreferenceKey) || "{}");
+    if (stored.entryMode === "resident") entryMode = "resident";
+    if (stored.bagMode === "cabin") bagMode = "cabin";
+  } catch {
+    // Defaults are safe when storage is unavailable.
+  }
+}
+
+function saveArrivalPreferences() {
+  try {
+    localStorage.setItem(arrivalPreferenceKey, JSON.stringify({ entryMode, bagMode }));
+  } catch {
+    // Keep the controls functional without persistence.
+  }
+}
+
+function updateArrivalPlanner() {
+  document.querySelectorAll("[data-entry-mode]").forEach((button) => {
+    const active = button.dataset.entryMode === entryMode;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+  document.querySelectorAll("[data-bag-mode]").forEach((button) => {
+    const active = button.dataset.bagMode === bagMode;
+    button.classList.toggle("active", active);
+    button.setAttribute("aria-pressed", String(active));
+  });
+
+  const copy = arrivalCopy[entryMode];
+  const note = document.querySelector("#entry-mode-note");
+  note.querySelector("strong").textContent = copy.label;
+  note.querySelector("span").textContent = copy.note;
+  document.querySelector("#border-step-copy").textContent = copy.step;
+
+  document.querySelectorAll("[data-checked-bag-step]").forEach((step) => {
+    step.classList.toggle("is-hidden", bagMode === "cabin");
+  });
+
+  const timing = arrivalTimes[`${entryMode}-${bagMode}`];
+  const exitEstimate = document.querySelector("#exit-estimate");
+  const briefExit = document.querySelector("#brief-exit-time");
+  const customsTime = document.querySelector("#fra-customs-time");
+  const exitTime = document.querySelector("#fra-exit-step-time");
+  exitEstimate.value = `about ${timing.exit}`;
+  briefExit.textContent = timing.exit;
+  customsTime.textContent = timing.customs;
+  customsTime.dateTime = `2026-10-05T${timing.customs}:00+02:00`;
+  exitTime.textContent = timing.exit;
+  exitTime.dateTime = `2026-10-05T${timing.exit}:00+02:00`;
+  saveArrivalPreferences();
+}
+
+function initArrivalPlanner() {
+  loadArrivalPreferences();
+  document.querySelectorAll("[data-entry-mode]").forEach((button) => {
+    button.addEventListener("click", () => {
+      entryMode = button.dataset.entryMode;
+      updateArrivalPlanner();
+    });
+  });
+  document.querySelectorAll("[data-bag-mode]").forEach((button) => {
+    button.addEventListener("click", () => {
+      bagMode = button.dataset.bagMode;
+      updateArrivalPlanner();
+    });
+  });
+  updateArrivalPlanner();
+}
+
 document.querySelectorAll(".filter").forEach((button) => {
   button.addEventListener("click", () => setFilter(button.dataset.filter));
 });
@@ -771,6 +879,8 @@ document.querySelector("#use-live-time").addEventListener("click", () => {
 renderPins();
 renderTimeline();
 initPrepChecklist();
+initJourneyChecklist();
+initArrivalPlanner();
 selectStop(selectedStopId);
 updateProgress();
 updateClock(385);

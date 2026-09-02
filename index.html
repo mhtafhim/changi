@@ -6,9 +6,9 @@
     <meta name="theme-color" content="#102a43" />
     <meta
       name="description"
-      content="A time-safe, airside-only exploration plan for a Singapore Changi Airport transfer from Terminal 2 to Terminal 3."
+      content="A step-by-step travel guide from Dhaka airport entry to Frankfurt airport exit, with a special interactive airside map for a Changi transfer."
     />
-    <title>Changi Airside Field Guide · 5 October 2026</title>
+    <title>Dhaka to Frankfurt Field Guide · Changi Airside Map</title>
     <link rel="stylesheet" href="styles.css" />
     <script src="app.js" defer></script>
   </head>
@@ -20,21 +20,135 @@
         <svg aria-hidden="true" viewBox="0 0 40 40">
           <path d="M5 28.5c8-1.8 14.4-7.7 18.8-17.2 1-2.2 4.1-2.2 5.2-.1 1.4 2.8.8 6.2-1.5 8.3L20 26.3l10.5 5.2-2.1 2.2-14-2.8-6.2 5.4-2-1.2 3.4-7.7L5 30.5v-2Z" />
         </svg>
-        <span>Airside field guide</span>
+        <span>DAC → FRA field guide</span>
       </a>
       <nav aria-label="Page sections">
-        <a href="#map">Map</a>
-        <a href="#route">Route</a>
-        <a href="#rules">Rules</a>
+        <a href="#journey">Journey</a>
+        <a href="#dhaka">Dhaka</a>
+        <a href="#changi">Changi</a>
+        <a href="#frankfurt">Frankfurt</a>
       </nav>
-      <div class="airside-badge"><span aria-hidden="true">●</span> No immigration</div>
+      <div class="airside-badge"><span aria-hidden="true">●</span> 2 flights · 1 transit</div>
     </header>
 
     <main id="top">
-      <section class="hero section-shell" aria-labelledby="hero-title">
+      <section class="journey-cover section-shell" id="journey" aria-labelledby="journey-title">
+        <div class="journey-cover-copy">
+          <p class="date-line">Sunday 4 → Monday 5 October 2026</p>
+          <h1 id="journey-title">From airport door<br />to arrival hall.</h1>
+          <p>
+            One continuous field guide for your 23-hour 45-minute trip: enter Dhaka Terminal 2,
+            connect without Singapore immigration, and leave Frankfurt Terminal 1 with your bag.
+          </p>
+        </div>
+        <div class="journey-spine" aria-label="Journey from Dhaka through Singapore to Frankfurt">
+          <article class="journey-leg dhaka-leg">
+            <span>DAC</span>
+            <div><strong>Dhaka</strong><small>Enter T2 · 19:55</small></div>
+          </article>
+          <div class="spine-flight" aria-hidden="true"><i></i><b>4h 05m</b><i></i></div>
+          <article class="journey-leg changi-leg">
+            <span>SIN</span>
+            <div><strong>Singapore</strong><small>Airside · 06:00–12:35</small></div>
+          </article>
+          <div class="spine-flight" aria-hidden="true"><i></i><b>13h 05m</b><i></i></div>
+          <article class="journey-leg frankfurt-leg">
+            <span>FRA</span>
+            <div><strong>Frankfurt</strong><small>Exit T1 · about 21:25</small></div>
+          </article>
+        </div>
+        <div class="journey-facts" aria-label="Journey summary">
+          <div><strong>19:55</strong><span>Reach DAC</span></div>
+          <div><strong>23:55</strong><span>SQ 447 departs</span></div>
+          <div><strong>6h 35m</strong><span>Changi connection</span></div>
+          <div><strong>19:40</strong><span>SQ 326 lands</span></div>
+        </div>
+      </section>
+
+      <section class="airport-chapter dhaka-section" id="dhaka" aria-labelledby="dhaka-title">
+        <div class="section-shell">
+          <div class="chapter-heading">
+            <div class="chapter-code">01 <span>DAC</span></div>
+            <div>
+              <p>Sunday, 4 October · Bangladesh time</p>
+              <h2 id="dhaka-title">Dhaka departure</h2>
+              <p class="chapter-intro">Arrive four hours early. Your most important job is making the bags and both boarding passes continue to Frankfurt.</p>
+            </div>
+          </div>
+
+          <div class="document-ribbon" aria-label="Documents to keep in hand luggage">
+            <strong>Keep together</strong>
+            <span>Passport</span>
+            <span>German visa or residence permit</span>
+            <span>Flight booking</span>
+            <span>Accommodation or German address</span>
+            <span>Insurance and supporting documents</span>
+          </div>
+
+          <div class="chapter-layout">
+            <aside class="airport-brief">
+              <div class="airport-brief-code">DAC</div>
+              <dl>
+                <div><dt>Terminal</dt><dd>2 on your booking</dd></div>
+                <div><dt>Airport target</dt><dd>19:55</dd></div>
+                <div><dt>Flight</dt><dd>SQ 447</dd></div>
+                <div><dt>Departure</dt><dd>23:55</dd></div>
+                <div><dt>At gate</dt><dd>by 22:15</dd></div>
+              </dl>
+              <p>Check the outdoor flight display before choosing an entrance gate; terminal and counter assignments can change.</p>
+            </aside>
+
+            <ol class="journey-steps" aria-label="Dhaka airport departure steps">
+              <li>
+                <label class="journey-check"><input type="checkbox" data-journey="dac-driveway" /><span></span></label>
+                <time datetime="2026-10-04T19:55:00+06:00">19:55</time>
+                <div><h3>Reach the Terminal 2 driveway</h3><p>Use a free trolley. Keep your passport, booking and entry documents out—not inside checked baggage.</p></div>
+              </li>
+              <li>
+                <label class="journey-check"><input type="checkbox" data-journey="dac-entry" /><span></span></label>
+                <time datetime="2026-10-04T20:00:00+06:00">20:00</time>
+                <div><h3>Enter through the displayed SQ 447 gate</h3><p>Show passport and ticket to airport security, then put all luggage through the entrance X-ray.</p></div>
+              </li>
+              <li class="priority-step">
+                <label class="journey-check"><input type="checkbox" data-journey="dac-checkin" /><span></span></label>
+                <time datetime="2026-10-04T20:20:00+06:00">20:20</time>
+                <div><h3>Find Singapore Airlines and check in</h3><p>Ask for both SQ 447 and SQ 326 boarding passes. Confirm every checked-bag tag says <strong>FRA</strong>, then photograph the baggage receipt.</p></div>
+              </li>
+              <li>
+                <label class="journey-check"><input type="checkbox" data-journey="dac-emigration" /><span></span></label>
+                <time datetime="2026-10-04T21:15:00+06:00">21:15</time>
+                <div><h3>Complete Bangladesh emigration</h3><p>Follow Immigration 1, 2 or 3. Bangladeshi passport holders do not need the departure immigration card, according to HSIA.</p></div>
+              </li>
+              <li>
+                <label class="journey-check"><input type="checkbox" data-journey="dac-security" /><span></span></label>
+                <time datetime="2026-10-04T21:45:00+06:00">21:45</time>
+                <div><h3>Pass final security</h3><p>Place jacket, belt, shoes, phone, laptop, chargers, power bank, keys and coins in the trays when directed.</p></div>
+              </li>
+              <li>
+                <label class="journey-check"><input type="checkbox" data-journey="dac-gate" /><span></span></label>
+                <time datetime="2026-10-04T22:15:00+06:00">22:15</time>
+                <div><h3>Be at the boarding gate</h3><p>Recheck the screen, fill your bottle after security if permitted, use the washroom and stay close to the gate.</p></div>
+              </li>
+              <li>
+                <label class="journey-check"><input type="checkbox" data-journey="dac-board" /><span></span></label>
+                <time datetime="2026-10-04T23:15:00+06:00">23:15</time>
+                <div><h3>Board SQ 447 when called</h3><p>Keep the FRA bag receipt and SQ 326 boarding pass with your passport. Set your phone to Singapore time after takeoff.</p></div>
+              </li>
+              <li class="takeoff-step">
+                <label class="journey-check"><input type="checkbox" data-journey="sq447" /><span></span></label>
+                <time datetime="2026-10-04T23:55:00+06:00">23:55</time>
+                <div><h3>Depart for Singapore</h3><p>Scheduled flight time: 4 hours 05 minutes. Arrival is 06:00 Singapore time because Singapore is two hours ahead.</p></div>
+              </li>
+            </ol>
+          </div>
+          <p class="official-note">HSIA recommends reaching the departure driveway and check-in area four hours before an international flight and proceeding to the gate 1–2 hours before departure.</p>
+        </div>
+      </section>
+
+      <section class="hero section-shell" id="changi" aria-labelledby="hero-title">
         <div class="hero-copy">
-          <p class="date-line">Monday, 5 October 2026 · Singapore time</p>
-          <h1 id="hero-title">See Changi.<br />Stay airside.</h1>
+          <p class="date-line">Chapter 2 · Monday, 5 October · Singapore time</p>
+          <h2 class="changi-title" id="hero-title">See Changi.<br />Stay airside.</h2>
           <p class="hero-intro">
             A clockwise T2 → T1 → T3 expedition built around your SQ 447 to SQ 326 connection.
             It covers every major airside attraction in the current official terminal guides, then
@@ -328,6 +442,94 @@
         </div>
       </section>
 
+      <section class="airport-chapter frankfurt-section" id="frankfurt" aria-labelledby="frankfurt-title">
+        <div class="section-shell">
+          <div class="chapter-heading">
+            <div class="chapter-code">03 <span>FRA</span></div>
+            <div>
+              <p>Monday, 5 October · Germany time</p>
+              <h2 id="frankfurt-title">Frankfurt arrival</h2>
+              <p class="chapter-intro">SQ 326 currently arrives at Terminal 1. Follow the yellow Arrivals and Baggage Claim signs; your live gate and carousel decide the exact route.</p>
+            </div>
+          </div>
+
+          <div class="arrival-planner" aria-label="Frankfurt arrival options">
+            <div class="arrival-control">
+              <span>My German document</span>
+              <div class="segmented" role="group" aria-label="German entry document">
+                <button class="active" type="button" data-entry-mode="short" aria-pressed="true">Short-stay visa</button>
+                <button type="button" data-entry-mode="resident" aria-pressed="false">Long-stay / residence</button>
+              </div>
+            </div>
+            <div class="arrival-control">
+              <span>My luggage</span>
+              <div class="segmented" role="group" aria-label="Luggage type">
+                <button class="active" type="button" data-bag-mode="checked" aria-pressed="true">Checked bag</button>
+                <button type="button" data-bag-mode="cabin" aria-pressed="false">Cabin only</button>
+              </div>
+            </div>
+            <div class="exit-estimate">
+              <span>Working exit estimate</span>
+              <output id="exit-estimate">about 21:25</output>
+              <small>Allow more time before booking a fixed train.</small>
+            </div>
+          </div>
+
+          <div class="entry-mode-note" id="entry-mode-note" aria-live="polite">
+            <strong>Short-stay arrival:</strong>
+            <span>Use an EES kiosk if directed, then see a border officer. Expect passport scanning, a facial image and fingerprints; keep your visa and supporting documents ready.</span>
+          </div>
+
+          <div class="chapter-layout frankfurt-layout">
+            <aside class="airport-brief frankfurt-brief">
+              <div class="airport-brief-code">FRA</div>
+              <dl>
+                <div><dt>Terminal</dt><dd>1 currently</dd></div>
+                <div><dt>Flight</dt><dd>SQ 326</dd></div>
+                <div><dt>Landing</dt><dd>19:40</dd></div>
+                <div><dt>Exit target</dt><dd id="brief-exit-time">21:25</dd></div>
+                <div><dt>Final time zone</dt><dd>CEST · UTC+2</dd></div>
+              </dl>
+              <p>If you have a connecting flight from Frankfurt, do not follow this exit plan—follow Transfer signs instead.</p>
+            </aside>
+
+            <ol class="journey-steps" aria-label="Frankfurt airport arrival steps">
+              <li class="landing-step">
+                <label class="journey-check"><input type="checkbox" data-journey="fra-land" /><span></span></label>
+                <time datetime="2026-10-05T19:40:00+02:00">19:40</time>
+                <div><h3>Land at Frankfurt Terminal 1</h3><p>After leaving the aircraft, follow <strong>Arrivals / Ankunft</strong> and <strong>Baggage Claim / Gepäckausgabe</strong>—not Transfer.</p></div>
+              </li>
+              <li>
+                <label class="journey-check"><input type="checkbox" data-journey="fra-border" /><span></span></label>
+                <time datetime="2026-10-05T20:00:00+02:00">20:00</time>
+                <div><h3>Join non-EU border control</h3><p id="border-step-copy">Use the EES kiosk if staff direct you, then present your passport and short-stay visa to the officer. Be ready with your address, visit purpose, return plan and proof of funds.</p></div>
+              </li>
+              <li data-checked-bag-step>
+                <label class="journey-check"><input type="checkbox" data-journey="fra-bag" /><span></span></label>
+                <time datetime="2026-10-05T20:45:00+02:00">20:45</time>
+                <div><h3>Collect your checked bag</h3><p>Find SQ 326 on the baggage screens and match the bag-tag number before leaving the carousel.</p></div>
+              </li>
+              <li data-checked-bag-step>
+                <label class="journey-check"><input type="checkbox" data-journey="fra-bag-check" /><span></span></label>
+                <time datetime="2026-10-05T21:10:00+02:00">21:10</time>
+                <div><h3>Report a missing or damaged bag now</h3><p>If needed, visit Singapore Airlines’ baggage-service desk before customs. Keep the boarding pass and baggage receipt.</p></div>
+              </li>
+              <li>
+                <label class="journey-check"><input type="checkbox" data-journey="fra-customs" /><span></span></label>
+                <time id="fra-customs-time" datetime="2026-10-05T21:15:00+02:00">21:15</time>
+                <div><h3>Choose the correct customs exit</h3><p>Use green only when you have nothing to declare. Use red when carrying goods, cash or quantities that require declaration—or when unsure.</p></div>
+              </li>
+              <li class="exit-step">
+                <label class="journey-check"><input type="checkbox" data-journey="fra-exit" /><span></span></label>
+                <time id="fra-exit-step-time" datetime="2026-10-05T21:25:00+02:00">21:25</time>
+                <div><h3>Exit into the Terminal 1 arrivals hall</h3><p>You are now landside in Germany. Follow signs for regional trains, long-distance trains, taxis or your pickup point.</p></div>
+              </li>
+            </ol>
+          </div>
+          <p class="official-note">Arrival times are planning estimates, not guarantees. EES queues and baggage delivery may add time; do not book a non-flexible onward train too close to landing.</p>
+        </div>
+      </section>
+
       <section class="sources section-shell" aria-labelledby="sources-title">
         <div class="section-heading">
           <div>
@@ -336,10 +538,12 @@
           </div>
         </div>
         <div class="source-links">
-          <a href="https://www.changiairport.com/en/fly/transit-guide.html" target="_blank" rel="noreferrer"><span>01</span>Transit eligibility and security</a>
-          <a href="https://www.changiairport.com/en/at-changi/transport-and-directions/transferring-between-terminals-jewel.html" target="_blank" rel="noreferrer"><span>02</span>Skytrain and Jewel access</a>
-          <a href="https://www.changiairport.com/en/experience/attractions-directory.html" target="_blank" rel="noreferrer"><span>03</span>Attractions directory</a>
-          <a href="https://www.changiairport.com/en/fly/flight-information.html" target="_blank" rel="noreferrer"><span>04</span>Live flight and gate status</a>
+          <a href="https://www.hsia.gov.bd/passenger-guide-category/1/deparature-guideline-1" target="_blank" rel="noreferrer"><span>01</span>Official Dhaka departure guide</a>
+          <a href="https://www.changiairport.com/en/fly/transit-guide.html" target="_blank" rel="noreferrer"><span>02</span>Changi transit eligibility</a>
+          <a href="https://www.changiairport.com/en/at-changi/transport-and-directions/transferring-between-terminals-jewel.html" target="_blank" rel="noreferrer"><span>03</span>Changi Skytrain and Jewel access</a>
+          <a href="https://www.changiairport.com/en/experience/attractions-directory.html" target="_blank" rel="noreferrer"><span>04</span>Changi attractions directory</a>
+          <a href="https://www.frankfurt-airport.com/en/travel-planning/check-in-luggage-controls/border-control.html" target="_blank" rel="noreferrer"><span>05</span>Frankfurt border control and EES</a>
+          <a href="https://www.frankfurt-airport.com/en/travel-planning/check-in-luggage-controls.html" target="_blank" rel="noreferrer"><span>06</span>Frankfurt baggage and customs</a>
         </div>
         <p class="source-note">Airport operations and locations can change before 5 October 2026. Follow live signs and airline staff over this guide.</p>
       </section>
@@ -347,8 +551,8 @@
 
     <footer>
       <div class="section-shell footer-inner">
-        <p>Built for SQ 447 → SQ 326 · 5 Oct 2026</p>
-        <p>Airside only · Changi local time (SGT, UTC+8)</p>
+        <p>Built for SQ 447 → SQ 326 · 4–5 Oct 2026</p>
+        <p>Dhaka entry → Changi airside → Frankfurt exit</p>
       </div>
     </footer>
   </body>
